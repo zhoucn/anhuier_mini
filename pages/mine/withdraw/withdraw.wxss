@@ -1,0 +1,230 @@
+/* pages/mine/withdraw/withdraw.wxss */
+.withdraw {
+  background: #fff;
+  border-radius: 10rpx;
+  margin: 25rpx;
+  padding: 40rpx 40px 0;
+}
+
+/*用户余额信息*/
+
+.accountInfo {
+  
+}
+
+.balanceMoney {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 26rpx;
+  line-height: 32rpx;
+  color: #666;
+}
+
+/*账户零钱  */
+
+.balanceMoneyNumber {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 40rpx;
+  font-size: 36rpx;
+  line-height: 36rpx;
+  color: #f8624c;
+}
+
+/*账户零钱单位  */
+
+.rmb {
+  font-size: 32rpx;
+  line-height: 44rpx;
+}
+
+/*提现信息 */
+.timeTips {
+  color: #ee6f6b;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+
+.tixianInfos {
+  margin-top: 100rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.tixianTitle {
+  font-size: 26rpx;
+  color: #666;
+  display: block;
+}
+
+/*提现具体信息  */
+
+.tixianInfo {
+  margin-top: 40rpx;
+}
+
+/* 提现货币单位 */
+
+.tixianImg {
+  font-size: 48rpx;
+  color: #333;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*提现钱数目  */
+
+.tixianRmb {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 25rpx;
+}
+
+.tixianRmb input {
+  width: 450rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 80rpx;
+  color: #333;
+  border: 1rpx solid transparent;
+}
+
+/* 提现提示 */
+
+.tixianTip {
+  font-size: 26rpx;
+  line-height: 104rpx;
+}
+
+.normalState {
+  color: #4f5f8e;
+}
+
+.errorState {
+  color: #e64340;
+}
+
+.withdraw-detail {
+  color: #4f5f8e;
+  float: right;
+}
+
+/*提现按钮  */
+
+button {
+  color: #fff;
+  padding: 0;
+  font-size: 34rpx;
+  width: 308rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 39rpx;
+  background: linear-gradient(#fc7b6e, #fb5f49);
+}
+
+button[disabled] {
+  background: linear-gradient(#fc7b6e, #fb5f49);
+  color: #fff !important;
+  opacity: 0.7;
+}
+
+.daozhangTip {
+  font-size: 26rpx;
+  color: #888;
+  display: block;
+  margin: 40rpx 0;
+  text-align: center;
+}
+
+/*联系客服  */
+
+.telServer {
+  float: left;
+  width: 750rpx;
+  text-align: center;
+  margin-top: 40rpx;
+}
+
+.service {
+  width: 120rpx;
+  font-size: 26rpx;
+  color: #576b95;
+  border-radius: 0rpx;
+  height: 34rpx;
+  line-height: 34rpx;
+  padding: 0;
+  background: #f1f1f1;
+  /* border:1rpx solid red; */
+}
+
+.service::after {
+  border: none;
+}
+
+/*隐藏 */
+
+.hide {
+  display: none;
+}
+
+/*展示 */
+
+.show {
+  display: inline-block;
+}
+
+/*1.1新增  */
+
+/*提现记录  */
+
+.withdrawal_my_area {
+  clear: both;
+  margin-top: 100rpx;
+}
+
+.withdrawal_my {
+  clear: both;
+  width: 100%;
+  height: 122rpx;
+  line-height: 122rpx;
+  background-color: #fff;
+  /* border-bottom: 1px solid #f0f0f0; */
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-around;
+  border: 1rpx solid red;
+}
+
+.text-box {
+  margin-top: 80rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.text-box text {
+  display: block;
+  margin-top: 10rpx;
+}
+
+.tip {
+  margin: 20rpx 0;
+  padding: 0 28rpx;
+  height: 38rpx;
+  line-height: 0;
+}
+
+.tip image {
+  display: inline-block;
+  vertical-align: middle;
+  width: 138rpx;
+  height: 38rpx;
+}
+
+.tip text {
+  margin-left: 22rpx;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 38rpx;
+  font-size: 22rpx;
+  color: #999;
+}

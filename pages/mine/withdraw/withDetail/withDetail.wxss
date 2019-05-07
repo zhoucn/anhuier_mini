@@ -1,0 +1,83 @@
+/* pages/mine/withdraw/withDetail/withDetail.wxss */
+
+page {
+  /* background: #f6f6f6; */
+}
+
+.list {
+  padding: 0 25rpx;
+  background-color: #fff;
+}
+
+.left {
+  padding-top: 8rpx;
+  line-height: 36rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.income-list {
+  height: 130rpx;
+  box-sizing: border-box;
+  padding: 15rpx 0;
+  position: relative;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.income-list image {
+  width: 74rpx;
+  height: 74rpx;
+  margin: 0 26rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.detail {
+  display: block;
+  font-size: 32rpx;
+  color: #010101;
+  line-height: 40rpx;
+  margin-bottom: 6rpx;
+}
+
+.detail.red{
+  color: #f00;
+}
+
+.time {
+  font-size: 24rpx;
+  display: inline-block;
+  color: #999;
+}
+
+.time.incomeAt{
+  margin-left: 20rpx;
+}
+
+.money {
+  display: block;
+  font-size: 30rpx;
+  color: #f8624c;
+}
+
+.money text {
+  color: #999;
+}
+
+/*提示*/
+
+.point {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  color: #ccc;
+  margin-top: 50%;
+}

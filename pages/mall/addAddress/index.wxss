@@ -1,0 +1,48 @@
+/* pages/mall/addAdderss/index.wxss */
+page {
+  height: 100%;
+  background-color: #f6f6f6;
+}
+
+.address-li {
+  padding: 24rpx 30rpx;
+  font-size: 30rpx;
+  background-color: #fff;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+
+.address-li text {
+  width: 130rpx;
+  color: #666;
+  margin-right: 20rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.address-li input,.address-li picker {
+  font-size: 28rpx;
+  width: 540rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.address-li textarea {
+  width: 730rpx;
+  font-size: 30rpx;
+}
+
+.save-btn{
+  width: 400rpx;
+  height: 104rpx;
+  line-height: 104rpx;
+  border-radius: 52rpx;
+  box-shadow: 5rpx 5rpx 5rpx #666;
+  margin: 65rpx auto 0;
+  background-color: #dc4e4a;
+  color: #fff;
+  font-size: 36rpx;
+}
+
+.save-btn.hover {
+  opacity: 0.8;
+}

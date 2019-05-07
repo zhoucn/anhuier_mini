@@ -1,0 +1,59 @@
+<!--pages/mine/proxyMore/proxyMore.wxml-->
+<view class='title'>挑选垫子</view>
+<view class='select'>
+  <button class='by-income' type="primary" bindtap='byIncome'>按收益</button>
+  <input placeholder='请输入编号' bindinput='deviceNoValue'></input>
+</view>
+<view class='select-title'>
+  <text style='width:150rpx'>选择</text>
+  <text>编号</text>
+  <text style='width:250rpx'>累计收益</text>
+</view>
+<checkbox-group bindchange="checkboxChange" class="select-box">
+  <block wx:for="{{device}}" wx:key="{{index}}">
+    <view class='select-body' wx:if="{{item.proxy_id}}">
+      <view style='width:150rpx'>
+        <checkbox disabled='true'></checkbox>
+      </view>
+      <text style='color:#ccc'>{{item.device_no}}</text>
+      <text style='width:250rpx;color:#ccc'>{{item.total}}</text>
+    </view>
+    <view class='select-body' wx:if="{{!item.proxy_id}}">
+      <view style='width:150rpx'>
+        <checkbox value="{{item.device_no}}"></checkbox>
+      </view>
+      <text bindtap='incomeDetail' data-device_no='{{item.device_no}}'>{{item.device_no}}</text>
+      <text style='width:250rpx'>{{item.total}}</text>
+    </view>
+  </block>
+</checkbox-group>
+<!-- <view class='tips'>
+  <text style='font-size:36rpx;font-weight:500'>躺着赚钱，每日提现，合作双赢</text> 代理800元可享受本编号按摩垫1年收益，代理人收回成本800元后本公司每笔收取10%的服务费。
+  <text>多选多得，收益成倍数增加</text>
+</view> -->
+<view class="form-group">
+  <label>数量</label>
+  <view class="tip">
+    <label> </label>
+  </view>
+  <input disabled value='{{number}}'></input>
+</view>
+<view class="form-group">
+  <label>金额</label>
+  <view class="tip">
+    <label> </label>
+  </view>
+  <input disabled value='{{money}}'></input>
+</view>
+<view class='checkbox'>
+  <checkbox-group bindchange="checkbox">
+    <checkbox value="checkbox"></checkbox>
+  </checkbox-group>
+  <navigator url='../protocol/protocol'>《按会儿按摩垫司机合作协议》</navigator>
+</view>
+<button class="scanCode" bindtap='addContract' type="primary" disabled='{{protocol}}'>确定并支付</button>
+<view class='contact'>
+  <image src='../../../static/img/contact.png'></image>
+  <text>客服</text>
+  <button open-type="contact"></button>
+</view>

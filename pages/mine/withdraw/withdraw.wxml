@@ -1,0 +1,37 @@
+<!--pages/mine/withdraw/withdraw.wxml-->
+<!--pages/mine/withdraw/withdraw.wxml-->
+  <view class="withdraw">
+    <!--用户余额信息  -->
+    <view class="accountInfo">
+      <view class="balanceMoney">账户余额</view>
+      <view class="balanceMoneyNumber">
+        <text>{{amount}}</text>
+        <text class="rmb">元</text>
+      </view>
+    </view>
+    <!--可提现余额  -->
+    <!--提现信息  -->
+    <view class="tixianInfos">
+      <text class="tixianTitle">提现金额</text>
+      <view class="tixianInfo">
+        <view class="tixianImg">￥</view>
+        <view class="tixianRmb">
+          <input type="digit" bindinput='inputRmb' value="{{rmbNumber}}" />
+        </view>
+      </view>
+    </view>
+    <view class="tixianTip">
+      <text class="normalState " catchtap='extracting_all'>全部提现</text>
+      <text class="withdraw-detail" bindtap='withdrawDetail'>提现记录</text>
+    </view>
+  </view>
+  <view class='tip'>
+    <image src="../../../static/img/tips.png"></image>
+    <text>一般情况下提现48小时内到账</text>
+  </view>
+  <button bindtap='withdraw' disabled="{{!button}}">提现</button>
+
+<view class='contact'>
+  <image src='../../../static/img/contact.png'></image>
+  <button open-type="contact"></button>
+</view>

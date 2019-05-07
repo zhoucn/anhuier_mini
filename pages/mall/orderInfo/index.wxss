@@ -1,0 +1,111 @@
+/* pages/mall/orderInfo/index.wxss */
+page{
+  height: 100%;
+  position: relative;
+}
+.info-content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100rpx;
+  overflow: auto;
+}
+.address-info {
+  margin: 20rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  color: #727272;
+  font-size: 30rpx;
+}
+.address-info.left {
+  padding-left: 60rpx;
+  position: relative;
+}
+.address-info.left image {
+  position: absolute;
+  top: 50%;
+  left: 20rpx;
+  width: 20rpx;
+  height: 20rpx;
+  transform: translateY(-50%);
+}
+.address-info view {
+  margin-bottom: 20rpx;
+}
+.address-info .phone{
+  margin-left: 30rpx;
+  color: #999;
+}
+.address-info text.block {
+  margin: 0;
+  width: 500rpx;
+  vertical-align: top;
+  display: inline-block;
+}
+.total {
+  line-height: 40rpx;
+  font-size: 32rpx;
+  margin: 0 20rpx;
+  padding: 20rpx;
+  text-align: right;
+  color: #999;
+  background-color: #fff;
+}
+.total text {
+  color: #dc4e4a;
+}
+.info-list {
+  margin: 0 20rpx 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx 10rpx;
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+  color: #727272;
+  position: relative;
+}
+.info-list image {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+  display: inline-block;
+  margin-right: 30rpx;
+}
+.info {
+  font-size: 28rpx;
+  display: inline-block;
+  vertical-align: top;
+  width: 530rpx;
+}
+.price {
+  margin-top: 20rpx;
+  color: #dc4e4a;
+}
+.num {
+  text-align: right;
+}
+.num text {
+  margin-left: 10rpx;
+}
+.info-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 90rpx;
+  display: flex;
+  background-color: #fff;
+}
+.info-button view {
+  background-color: #dc4e4a;
+  margin: 0 4rpx;
+  font-size: 32rpx;
+  text-align: center;
+  flex: 1;
+  color: #fff;
+}
+.info-button view.no {
+  background-color: #fff;
+  color: #dc4e4a;
+}

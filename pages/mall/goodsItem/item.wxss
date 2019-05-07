@@ -1,0 +1,186 @@
+/* pages/mall/goodsItem/item.wxss */
+/* pages/index/goods/goods.wxss */
+page {
+  height: 100%;
+  background-color: #eff0f1;
+}
+
+.index_swiper {
+  height: 560rpx;
+  background-color: #fff3f3;
+}
+
+button::after {
+  border: none;
+}
+
+.index_swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.goods-info {
+  padding: 20rpx 36rpx;
+  background-color: #fff;
+}
+
+.tag {
+  display: inline-block;
+  width: 70rpx;
+  margin-left: 46rpx;
+  vertical-align: middle;
+}
+
+.goods_title {
+  font-size: 26rpx;
+}
+
+.goods_price {
+  padding: 10px 0;
+  text-align: center;
+  line-height: 12px;
+  background-color: #fff;
+}
+
+.goods_text{
+  display: inline-block;
+  margin: 0 30rpx;
+}
+
+.goods_price icon{
+  line-height: 2px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.sales {
+  font-weight: bold;
+  font-size: 22rpx;
+  color: #4c4c4c;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.ticket {
+  width:90px;
+  height:30px;
+  float:right;
+  font-size:17px;
+  color:#fff;
+  line-height:30px;
+  margin-right:-98px;
+
+}
+
+.quan{
+  width:90px;
+height:30px;
+/* margin-top:-7px; */
+float:right;
+margin-right:13px;
+
+
+}
+.ticket_price {
+  margin-top: 20rpx;
+  font-weight: bold;
+  font-size: 36rpx;
+  color: #c00702;
+  position: relative;
+}
+
+.goods_detail {
+  width:95%;
+  margin:20rpx auto;
+  color:#7b7b7b;
+  font-size:13px;
+  margin-bottom:55px;
+  line-height:23px;
+  min-height:53px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.item_tabBar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+.buy-car-button {
+  font-size: 26rpx;
+  color: #dc4e4a;
+  background: #feefee;
+  text-align: center;
+  display: inline-block;
+  width: 300rpx;
+  height: 90rpx;
+  border-radius: 0px;
+  line-height: 90rpx;
+  vertical-align: middle;
+}
+
+.buy-button {
+  font-size: 26rpx;
+  color: #fff;
+  background: #dc4e4a;
+  text-align: center;
+  display: inline-block;
+  height: 90rpx;
+  width: 300rpx;
+  line-height: 90rpx;
+  vertical-align: middle;
+}
+.goodsItem{
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 78rpx;
+  color: #4c4c4c;
+  margin-top: 16rpx;
+  background-color: #fff;
+}
+
+.car_button {
+  width: 150rpx;
+  height: 90rpx;
+  font-size: 18rpx;
+  text-align: center;
+  display: inline-block;
+  color: #666;
+  background-color: #fff;
+  vertical-align: middle;
+  position: relative;
+}
+
+.car_button image {
+  display: block;
+  width: 50rpx;
+  height: 50rpx;
+  margin: 6rpx auto 0;
+}
+
+.car_button .num {
+  position: absolute;
+  top: 5rpx;
+  right: 30rpx;
+  font-size: 22rpx;
+  color: #fff;
+  text-align: center;
+  width: 32rpx;
+  line-height: 32rpx;
+  border-radius: 50%;
+  background-color: #dc4e4a;
+}
+
+.stock-num {
+  font-size: 24rpx;
+  font-weight: normal;
+  margin-left: 50rpx;
+  color: #666;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+

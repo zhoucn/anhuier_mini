@@ -1,0 +1,64 @@
+/* pages/mine/driverInfo/driverInfo.wxss */
+
+page {
+  height: 100%;
+}
+
+.info-box {
+  overflow: hidden;
+  padding: 0 38rpx;
+  margin: 25rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 0 20rpx #e3e3e3;
+}
+
+.info-list{
+  color: #010101;
+  font-size: 30rpx;
+  height: 114rpx;
+  line-height: 114rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.info-list.no {
+  color: #999;
+}
+
+.info-list text,.info-list.no text  {
+  color: #010101;
+  font-size: 30rpx;
+  width: 190rpx;
+  float: left;
+  line-height: 114rpx;
+}
+
+.device-no {
+  display: inline-block;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+}
+
+/* button{
+  width: 400rpx;
+  margin: 30rpx auto;
+} */
+
+.info-list .scanCode {
+  width: 160rpx;
+  display: inline-block;
+  font-size: 30rpx;
+  color: #f63;
+  padding: 0rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+image {
+  width: 400rpx;
+  height: 500rpx;
+  margin: 0 auto;
+  display: block;
+}

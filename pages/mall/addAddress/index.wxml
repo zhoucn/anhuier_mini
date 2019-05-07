@@ -1,0 +1,25 @@
+<!--pages/mall/addAdderss/index.wxml-->
+<view class="add-address">
+  <view class="address-li">
+    <text>收货人</text>
+    <input placeholder='请输入收货人姓名' type="text" placeholder-style="color: #ccc" bindinput="setName" value="{{name}}" />
+  </view>
+  <view class="address-li">
+    <text>手机号</text>
+    <input placeholder='请输入收货人手机号' type="number" maxlength="11" placeholder-style="color: #ccc" bindinput="setPhone" value="{{phone}}" />
+  </view>
+  <view class="address-li">
+    <text>省市区</text>
+    <picker mode="region" bindchange="setRegion" value='{{region}}'>
+      <input placeholder='请选择省市区' type="text" disabled placeholder-style="color: #ccc" wx:if="{{region.length == 0}}" />
+      <input disabled wx:else value="{{region[0]}} {{region[1]}} {{region[2]}}" />
+    </picker>
+  </view>
+  <view class="address-li">
+    <textarea placeholder="请输入详细地址" placeholder-style="color: #ccc" bindinput="setAddress" value="{{address}}" maxlength="60" />
+  </view>
+  <view class="address-li">
+    <text>设为默认</text><switch bindchange="switchChange" color="#dc4e4a" checked="{{isDefault}}" />
+  </view>
+  <button class="save-btn" hover-class="hover" bindtap="save">保存并使用</button>
+</view>

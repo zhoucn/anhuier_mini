@@ -1,0 +1,22 @@
+<!--pages/mine/order/order.wxml-->
+<view class='point' wx:if="{{!orderList.length}}">
+  <image src="../../../static/img/no_list.png" mode="widthFix" class="no-list"></image>
+  <text>暂无订单记录~</text>
+</view>
+<view class="income-ul" wx:else>
+  <block wx:for="{{orderList}}" wx:key="{{index}}">
+    <view class='income-list'>
+      <view class='left'>
+        <view class='detail'>订单号:{{item.orderNo}}<text wx:if="{{item.orderState == 0}}" class="pay-fail">支付失败</text></view>
+        <text class='time'>{{item.createdAt}}</text>
+      </view>
+      <view class='right'>
+        <text class='money'> {{item.orderAmount}}元</text>
+      </view>
+    </view>
+  </block>
+</view>
+<view class='contact'>
+  <image src='../../../static/img/contact.png'></image>
+  <button open-type="contact"></button>
+</view>

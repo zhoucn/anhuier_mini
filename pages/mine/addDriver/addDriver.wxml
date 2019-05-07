@@ -1,0 +1,44 @@
+<!--pages/mine/addDriver/addDriver.wxml-->
+
+<!-- <button class="scanCode" bindtap='scanCode' wx:if="{{!is_device}}" style='margin-top:400rpx;height:100rpx;line-height:100rpx;'>扫描按摩垫二维码绑定</button> -->
+<view class="add-content">
+  <view class="form-group">
+    <label>姓名：</label>
+    <input placeholder='请输入姓名' bindinput='nameValue'></input>
+  </view>
+  <!-- <view class="form-group">
+    <label>身份证号</label>
+    <view class="tip">
+      <label> *</label>
+    </view>
+    <input placeholder='请输入身份证号' maxlength='18' bindinput='IDCardValue'></input>
+  </view>-->
+  <view class="form-group">
+    <label>车属公司：</label>
+    <input placeholder='请填写车属公司' bindinput='companyValue'></input>
+  </view>
+  <view class="form-group">
+    <label>手机号：</label>
+    <input placeholder='请输入手机号' bindinput='phoneValue' maxlength='11' type='number'></input>
+  </view>
+  <view class="form-group">
+    <label>验证码：</label>
+    <input placeholder='请输入验证码' class="captcha" bindinput='captchaValue' maxlength='6' type='number'></input>
+    <view class="captcha-btn" bindtap="sendCode" wx:if="{{codeTime == 0}}">获取验证码</view>
+    <view class="captcha-btn" wx:else>{{codeTime}}秒后重发</view>
+  </view>
+</view>
+<view class='checkbox'>
+  <checkbox-group bindchange="checkbox">
+    <checkbox value="checkbox"></checkbox>
+  </checkbox-group>
+  <navigator url='../protocol/protocol'>《按会儿按摩垫司机合作协议》</navigator>
+</view>
+<button class="submit" wx:if='{{!protocol}}' bindtap='registerDriver'>确定并注册</button>
+<button class="submit disabled" wx:else>确定并注册</button>
+
+<view class='contact'>
+  <image src='../../../static/img/contact.png'></image>
+  <text>客服</text>
+  <button open-type="contact"></button>
+</view>

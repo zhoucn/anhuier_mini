@@ -1,0 +1,94 @@
+/* pages/mall/order/index.wxss */
+page {
+  position: relative;
+  height: 100%;
+}
+.no-list {
+  padding-top: 90rpx;
+  text-align: center;
+}
+.no-list image {
+  width: 118rpx;
+  height: 150rpx;
+}
+.no-list text {
+  display: block;
+  font-size: 28rpx;
+  margin-top: 50rpx;
+  color: #727272;
+}
+.order-head {
+  background-color: #fff;
+  line-height: 80rpx;
+}
+.order-head view {
+  width: 150rpx;
+  text-align: center;
+  display: inline-block;
+}
+.order-head view text {
+  display: inline-block;
+  color: #4c4c4c;
+  font-size: 24rpx;
+}
+.order-head view.active text {
+  color: #dc4e4a;
+  border-bottom: 2rpx solid #dc4e4a;
+}
+.order-body {
+  position: absolute;
+  top: 90rpx;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 20rpx;
+  overflow: auto;
+}
+.order-li {
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding: 20rpx 10rpx;
+  margin-bottom: 20rpx;
+  font-size: 24rpx;
+  color: #727272;
+  position: relative;
+}
+.order-li image {
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10rpx;
+  display: inline-block;
+  margin-right: 20rpx;
+}
+.order-info {
+  display: inline-block;
+  vertical-align: top;
+}
+.order-info text {
+  font-size: 36rpx;
+  color: #dc4e4a;
+}
+.order-info view {
+  margin-bottom: 8rpx;
+}
+.button-box {
+  position: absolute;
+  bottom: 25rpx;
+  right: 20rpx;
+  z-index: 9;
+  white-space: nowrap;
+}
+.button {
+  font-size: 24rpx;
+  color: #dc4e4a;
+  border: 2rpx solid #dc4e4a;
+  text-align: center;
+  border-radius: 6rpx;
+  line-height: 40rpx;
+  padding: 0 15rpx;
+  margin-left: 20rpx;
+  display: inline-block;
+}
+.button.no {
+  border: none;
+}

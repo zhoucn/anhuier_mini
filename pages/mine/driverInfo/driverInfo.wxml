@@ -1,0 +1,29 @@
+<!--pages/mine/driverInfo/driverInfo.wxml-->
+<view class='info-box'>
+  <view class='info-list'>
+    <text>姓名：</text>{{driver.driverName}}
+  </view>
+  <view class='info-list'>
+    <text>身份证号：</text>{{driver.IDCard}}
+  </view>
+  <view class='info-list'>
+    <text>手机号：</text>{{driver.driverPhone}}
+  </view>
+  <view class='info-list'>
+    <text>车属公司：</text>{{driver.company}}
+  </view>
+  <view class='info-list' wx:if="{{driver.carNo}}">
+    <text>车牌号：</text>{{driver.carNo}}
+  </view>
+  <view class='info-list' wx:if="{{driver.deviceNo}}">
+    <text>按摩垫编号：</text>{{driver.deviceNo}}
+  </view>
+  <view class='info-list no' wx:if="{{!driver.deviceNo}}">
+    <text>按摩垫编号：</text>未绑定按摩垫
+  </view>
+</view>
+<view class='contact'>
+  <image src='../../../static/img/contact.png'></image>
+  <text>客服</text>
+  <button open-type="contact"></button>
+</view>

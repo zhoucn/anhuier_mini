@@ -1,0 +1,81 @@
+/* pages/mine/order/order.wxss */
+
+page {
+  /* background: #f6f6f6; */
+}
+
+.no-list {
+  margin: 0 auto 40rpx;
+  display: block;
+  width: 118rpx;
+}
+
+.left {
+  float: left;
+  margin-left: 20rpx;
+}
+
+.right {
+  float: right;
+}
+
+.income-ul {
+  padding-top: 20rpx;
+}
+
+.income-list {
+  height: 122rpx;
+  margin: 0 25rpx 20rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  box-shadow: 0 0 20rpx #e3e3e3;
+}
+
+.detail {
+  display: block;
+  color: #333;
+  font-size: 30rpx;
+  line-height: 72rpx
+}
+
+.pay-fail{
+  background-color: #f8624c;
+  color: #fff;
+  margin-left: 20rpx;
+  border-radius: 6rpx;
+  font-size: 20rpx;
+  line-height: 28rpx;
+  padding: 2rpx 12rpx;
+  display: inline-block;
+  transform: translateY(-4rpx);
+}
+
+.time {
+  font-size: 26rpx;
+  display: block;
+  color: #666;
+}
+
+.money {
+  display: block;
+  margin-right: 20rpx;
+  font-size: 38rpx;
+  color: #ff0000;
+  line-height: 122rpx;
+}
+
+/*提示*/
+
+.point {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 32rpx;
+  color: #ccc;
+  margin-top: 50%;
+}
+
+.point text {
+  font-size: 30rpx;
+  color: #727272;
+}

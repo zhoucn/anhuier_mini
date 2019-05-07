@@ -1,0 +1,118 @@
+/* pages/mine/income/index/index.wxss */
+
+.income_box {
+  padding: 25rpx 0;
+  background-color: #fff;
+}
+
+.income_box view {
+  width: 50%;
+  display: inline-block;
+}
+
+.income_box view:first-child {
+  box-sizing: border-box;
+  border-right: 1rpx solid #f5f5f5;
+}
+
+.title {
+  font-size: 28rpx;
+  color: #333;
+  margin-top: 15rpx;
+  padding-left: 65rpx;
+  line-height: 55rpx;
+  position: relative;
+}
+
+.title .hot {
+  width: 7rpx;
+  height: 30rpx;
+  background-color: #f8624c;
+  position: absolute;
+  top: 50%;
+  left: 48rpx;
+  transform: translateY(-50%);
+}
+
+.income_box text {
+  text-align: center;
+  display: block;
+  margin-top: 20rpx;
+}
+
+.income_box button {
+  padding: 0;
+  display: block;
+  font-size: 26rpx;
+  width: 90rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #fff;
+  border: none;
+  background: #fd7411;
+  border-radius: 15rpx;
+  margin-top: 58rpx;
+}
+
+.income_box .text_small {
+  margin-top: 14rpx;
+}
+
+.income_box .text_small text {
+  margin-top: 10rpx;
+  font-size: 20rpx;
+}
+
+.day_income text {
+  font-size: 20rpx;
+  color: #999;
+}
+
+.day_income .text_big {
+  font-size: 28rpx;
+  color: #f8624c;
+  margin-top: 0;
+}
+
+.day_income .today, .yesterday {
+  width: 50%;
+  float: left;
+  height: 84rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 30rpx;
+  background: #eff0f1;
+  font-weight: bold;
+}
+
+.day_income .active {
+  color: #dc4e4a;
+  background: #fff;
+}
+
+.order_box {
+  color: #666;
+  background: #fff;
+  margin: 7rpx 10rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx #ccc;
+}
+
+.order_box .income_box view {
+  text-align: center;
+}
+
+.order_box .income_box view text {
+  font-size: 28rpx;
+}
+
+.noun navigator {
+  text-align: center;
+  font-size: 24rpx;
+  color: #f63;
+  margin-top: 40rpx;
+}
+
+button::after {
+  border: none;
+}

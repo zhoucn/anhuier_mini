@@ -1,0 +1,156 @@
+/* pages/mine/proxyMore/proxyMore.wxss */
+.form-group, .work-time {
+  margin-top: 40rpx;
+  height: 40rpx;
+}
+
+.form-group label, .work-time label {
+  width: 200rpx;
+  text-align: right;
+  font-size: 30rpx;
+  float: left;
+}
+
+.form-group input {
+  width: 400rpx;
+  border: 2rpx solid #eaeaea;
+  float: left;
+  font-size: 22rpx;
+  padding: 0 10rpx;
+}
+
+.form-group .tip, .work-time .tip {
+  width: 30rpx;
+  color: red;
+  float: left;
+  /* margin-top: 10rpx; */
+}
+
+.form-group .tip label, .work-time .tip label {
+  width: 30rpx;
+  font-size: 23rpx;
+  text-align: center;
+  height: 50rpx;
+}
+.title {
+  text-align: center;
+  font-size: 45rpx;
+  margin-top: 20rpx;
+  height: 70rpx;
+  border-bottom: 2rpx solid #eaeaea;
+}
+
+.scanCode {
+  width: 400rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  margin-top: 40rpx;
+  background: #f63;
+  color: #fff;
+  margin-bottom: 40rpx;
+}
+
+.select-title {
+  margin-top: 20rpx;
+}
+
+.select-title text {
+  display: inline-block;
+  width: 350rpx;
+  text-align: center;
+  font-size: 40rpx;
+}
+
+.select-body text, .select-body view {
+  display: inline-block;
+  width: 350rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+/* .select-body view{
+   display: inline-block;
+   width: 250rpx;
+   text-align: center;
+} */
+
+.select-body checkbox {
+  transform: scale(0.7);
+}
+
+.select {
+  margin-top: 20rpx;
+}
+
+.select .by-income {
+  display: inline-block;
+  width: 110rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0;
+  font-size: 22rpx;
+  margin-left: 120rpx;
+}
+
+.select input {
+  display: inline-block;
+  width: 300rpx;
+  min-height: 50rpx;
+  line-height: 50rpx;
+  border: 2rpx solid #eaeaea;
+  font-size: 22rpx;
+  padding: 0 10rpx;
+  margin-left: 50rpx;
+}
+
+.select .search {
+  display: inline-block;
+  width: 100rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  padding: 0;
+  font-size: 22rpx;
+  margin-left: 10rpx;
+}
+
+.select-box {
+  height: 300rpx;
+  overflow-y: auto;
+  /* border: 2rpx solid #f6f6f6; *//* background: #f6f6f6; */
+}
+
+checkbox-group {
+  display: inline-block;
+}
+
+.checkbox {
+  text-align: center;
+  margin-top: 28rpx;
+}
+
+.checkbox checkbox {
+  transform: scale(0.7);
+}
+
+navigator {
+  display: inline-block;
+  color: blue;
+  font-size: 30rpx;
+}
+
+.tips {
+  width: 650rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  /* border: 2rpx solid #f63; */
+  /* background: rgb(211, 139, 116); */
+  padding: 10rpx;
+}
+
+.tips text {
+  text-align: center;
+  display: block;
+  font-size: 36rpx;
+}

@@ -1,0 +1,70 @@
+/* pages/mine/driver/driver.wxss */
+
+.page-box {
+  width: 700rpx;
+  height: 100rpx;
+  margin: 20rpx auto;
+  border: 2rpx solid #eaeaea;
+  border-radius: 10rpx;
+}
+
+.page-box text {
+  display: block;
+  float: left;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0rpx 10rpx;
+  margin-top: 5rpx;
+}
+
+.page-box input {
+  float: left;
+  width: 550rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+}
+
+.page-box .code-input {
+  width: 450rpx;
+}
+
+.phone {
+  border-right: 2rpx solid #eaeaea;
+  font-size: 34rpx;
+  color: #333;
+  width: 108rpx;
+}
+
+button::after {
+  border: 0;
+}
+
+.code {
+  border-left: 2rpx solid #eaeaea;
+  padding: 0;
+  border-radius: 0;
+  font-size: 34rpx;
+  color: #fd7411;
+  width: 220rpx;
+  height: 90rpx;
+  background: #fff;
+  margin-top: 5rpx;
+}
+
+.submit-button {
+  padding: 0;
+  width: 650rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 30rpx auto;
+  background: #fd7411;
+  color: #fff;
+}
+
+.navigator {
+  color: red;
+  font-size: 32rpx;
+  text-align: center;
+}

@@ -1,0 +1,35 @@
+<!--pages/mall/orderInfo/index.wxml-->
+<view class="info-content">
+  <view class="address-info left">
+    <image src="../../../static/img/location.png" mode="widthFix"></image>
+    <view>{{name}} <text class="phone">{{phone}}</text></view>
+    <view>{{region}} {{addrInfo}}</view>
+  </view>
+  <view class="info-list" wx:for="{{orderInfo}}" wx:key="{{index}}">
+    <image src="{{imgUrl + item.goodsIndexImg}}"></image>
+    <view class="info">
+      <view class="title">{{item.goodsTitle}}</view>
+      <view class="price">￥{{item.goodsPrice}}</view>
+      <view class="num">x<text>{{item.goodsNum}}</text></view>
+    </view>
+  </view>
+  <view class="total">总价：<text>￥{{priceTotal}}</text></view>
+  <view class="address-info">
+    <view>下单时间：{{createdAt}}</view>
+    <view>订单号：{{orderNo}}</view>
+    <view>备注：<text class="block">{{userRemark}}</text></view>
+  </view>
+</view>
+<view class="info-button">
+  <block wx:if="{{isCancel > 0}}">
+    <view bindtap="orderDel">删除订单</view>
+    <view class="no">已关闭</view>
+  </block>
+  <block wx:else>
+    <view wx:if="{{priceStatus == 0}}" bindtap="orderCancel">取消订单</view>
+    <view wx:if="{{priceStatus == 0}}" bindtap="orderPay">付款</view>
+    <view class="no" wx:elif="{{priceStatus == 1 && sendStatus == 0}}">待发货</view>
+    <view wx:elif="{{priceStatus == 1 && sendStatus == 1}}" bindtap="orderConfirm">确认收货</view>
+    <view class="no" wx:elif="{{priceStatus == 1 && sendStatus == 2}}">已完成</view>
+  </block>
+</view>

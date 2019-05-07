@@ -1,0 +1,116 @@
+<!--pages/mall/order/index.wxml-->
+<view class="order-head">
+  <view class="{{index == 0 ? 'active' : ''}}" data-index="0" bindtap="setIndex"><text>全部</text></view>
+  <view class="{{index == 1 ? 'active' : ''}}" data-index="1" bindtap="setIndex"><text>待付款</text></view>
+  <view class="{{index == 2 ? 'active' : ''}}" data-index="2" bindtap="setIndex"><text>待发货</text></view>
+  <view class="{{index == 3 ? 'active' : ''}}" data-index="3" bindtap="setIndex"><text>待收货</text></view>
+  <view class="{{index == 4 ? 'active' : ''}}" data-index="4" bindtap="setIndex"><text>已完成</text></view>
+</view>
+<view class="order-body">
+  <view class="list-content"wx:if="{{index == 0}}">
+    <view class="no-list" wx:if="{{orderList.length == 0}}">
+      <image src="../../../static/img/no_list.png" mode="widthFix"></image>
+      <text>您还没有购买商品的订单哦~</text>
+    </view>
+    <view class="order-li" wx:for="{{orderList}}" wx:key="{{index}}">
+      <navigator url="../orderInfo/index?id={{item.orderId}}">
+        <image src="{{imgUrl + item.orderInfo[0].goodsIndexImg}}"></image>
+        <view class="order-info">
+          <view class="order-no">订单号：{{item.orderNo}}</view>
+          <view>下单时间： {{item.createdAt}}</view>
+          <text>￥{{item.priceTotal}}</text>
+        </view>
+      </navigator>
+      <view class="button-box">
+        <block wx:if="{{item.isCancel > 0}}">
+          <view class="button" bindtap="orderDel" data-id="{{item.orderId}}">删除订单</view>
+          <view class="button no">已关闭</view>
+        </block>
+        <block wx:else>
+          <view class="button" wx:if="{{item.priceStatus == 0}}" data-id="{{item.orderId}}" bindtap="orderCancel">取消订单</view>
+          <view class="button" wx:if="{{item.priceStatus == 0}}" data-id="{{item.orderId}}" bindtap="orderPay">付款</view>
+          <view class="button no" wx:elif="{{item.priceStatus == 1 && item.sendStatus == 0}}">待发货</view>
+          <view class="button" wx:elif="{{item.priceStatus == 1 && item.sendStatus == 1}}" data-id="{{item.orderId}}" bindtap="orderConfirm">确认收货</view>
+          <view class="button no" wx:elif="{{item.priceStatus == 1 && item.sendStatus == 2}}">已完成</view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class="list-content"wx:if="{{index == 1}}">
+    <view class="no-list" wx:if="{{payList.length == 0}}">
+      <image src="../../../static/img/no_list.png" mode="widthFix"></image>
+      <text>您还没有未付款的订单哦~</text>
+    </view>
+    <view class="order-li" wx:for="{{payList}}" wx:key="{{index}}">
+      <navigator url="../orderInfo/index?id={{item.orderId}}">
+        <image src="{{imgUrl + item.orderInfo[0].goodsIndexImg}}"></image>
+        <view class="order-info">
+          <view class="order-no">订单号：{{item.orderNo}}</view>
+          <view>下单时间： {{item.createdAt}}</view>
+          <text>￥{{item.priceTotal}}</text>
+        </view>
+      </navigator>
+      <view class="button-box">
+        <view class="button" data-id="{{item.orderId}}" bindtap="orderCancel">取消订单</view>
+        <view class="button" data-id="{{item.orderId}}" bindtap="orderPay">付款</view>
+      </view>
+    </view>
+  </view>
+  <view class="list-content"wx:if="{{index == 2}}">
+    <view class="no-list" wx:if="{{sendList.length == 0}}">
+      <image src="../../../static/img/no_list.png" mode="widthFix"></image>
+      <text>您还没有待发货的订单哦~</text>
+    </view>
+    <view class="order-li" wx:for="{{sendList}}" wx:key="{{index}}">
+      <navigator url="../orderInfo/index?id={{item.orderId}}">
+        <image src="{{imgUrl + item.orderInfo[0].goodsIndexImg}}"></image>
+        <view class="order-info">
+          <view class="order-no">订单号：{{item.orderNo}}</view>
+          <view>下单时间： {{item.createdAt}}</view>
+          <text>￥{{item.priceTotal}}</text>
+        </view>
+      </navigator>
+      <view class="button-box">
+        <view class="button no">待发货</view>
+      </view>
+    </view>
+  </view>
+  <view class="list-content"wx:if="{{index == 3}}">
+    <view class="no-list" wx:if="{{receiveList.length == 0}}">
+      <image src="../../../static/img/no_list.png" mode="widthFix"></image>
+      <text>您还没有待收货的订单哦~</text>
+    </view>
+    <view class="order-li" wx:for="{{receiveList}}" wx:key="{{index}}">
+      <navigator url="../orderInfo/index?id={{item.orderId}}">
+        <image src="{{imgUrl + item.orderInfo[0].goodsIndexImg}}"></image>
+        <view class="order-info">
+          <view class="order-no">订单号：{{item.orderNo}}</view>
+          <view>下单时间： {{item.createdAt}}</view>
+          <text>￥{{item.priceTotal}}</text>
+        </view>
+      </navigator>
+      <view class="button-box">
+        <view class="button" data-id="{{item.orderId}}" bindtap="orderConfirm">确认收货</view>
+      </view>
+    </view>
+  </view>
+  <view class="list-content"wx:if="{{index == 4}}">
+    <view class="no-list" wx:if="{{successList.length == 0}}">
+      <image src="../../../static/img/no_list.png" mode="widthFix"></image>
+      <text>您还没有已完成的订单哦~</text>
+    </view>
+    <view class="order-li" wx:for="{{successList}}" wx:key="{{index}}">
+      <navigator url="../orderInfo/index?id={{item.orderId}}">
+        <image src="{{imgUrl + item.orderInfo[0].goodsIndexImg}}"></image>
+        <view class="order-info">
+          <view class="order-no">订单号：{{item.orderNo}}</view>
+          <view>下单时间： {{item.createdAt}}</view>
+          <text>￥{{item.priceTotal}}</text>
+        </view>
+      </navigator>
+      <view class="button-box">
+        <view class="button no">已完成</view>
+      </view>
+    </view>
+  </view>
+</view>

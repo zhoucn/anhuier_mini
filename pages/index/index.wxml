@@ -1,0 +1,96 @@
+<!--pages/index/index.wxml-->
+<view wx:if="{{deviceState}}">
+  <text class="off-title">设备断网解决方案</text>
+  <view class='off-choice'>
+    <text>1、请检查设备后面的开关是否是打开或后面的电源插头是否插紧</text>
+    <image src='../../static/img/powerOff.jpeg'></image>
+  </view>
+  <view class='off-choice'>
+    <text>2、请检查网络是否畅通</text>
+    <image src='../../static/img/signal.png' class='signal'></image>
+  </view>
+  <view class='off-tip'>
+    <text>重启后请稍等一分钟，再重新扫描二维码，祝您按摩愉快</text>
+  </view>
+</view>
+<view class="content" wx:if="{{!deviceState}}">
+  <swiper indicator-dots="true" autoplay="true" circular="true" class='index-swiper'>
+    <block wx:for="{{banner}}" wx:key="{{index}}">
+      <swiper-item>
+        <image src="{{ bannerSrc + item}}" class="slide-image" bak_bindtap="bannerUrl"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='tip'>
+    <image src="../../static/img/tips.png"></image>
+    <text wx:if="{{countdown}}">此按摩时长仅供参考,实际时间以按摩垫为准</text>
+    <text wx:else>孕妇、心血管疾病患者或体内安装医用器械者禁用</text>
+    <!-- <scroll-view class='scroll_notice'>
+      <view class='scroll_notice_item_bg' animation="{{animationData_notice}}">
+        <view class="scroll_notice_item_bg">
+          <view class='scroll_notice_item'>孕妇、心血管疾病患者或体内安装医用器械者禁用</view>
+        </view>
+      </view>
+    </scroll-view> -->
+  </view>
+  <view class='scan-code' wx:if="{{indexModel}}">
+    <image src='../../static/img/scanCode.png' bindtap='scanCode'></image>
+  </view>
+  <!-- 扫码选择时长 -->
+  <view class="choice-mode" wx:if="{{choiceModel}}">
+    <view class='choice'>
+      <image src="../../static/img/close.png" mode="widthFix" class="close" bindtap='close'></image>
+      <text class="choice-title">请选择您的按摩时间</text>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <block wx:for="{{selectList}}" wx:key="{{index}}">
+          <view class="list {{item.runTime == time ? 'active' : ''}}">
+            <label><radio value="{{item.runTime}}" /> {{item.money}}元 / {{item.runTime / 60}}分钟</label>
+          </view>
+        </block>
+      </radio-group>
+      <view class="btn-container">
+        <button size="mini" class="left-btn" bindtap='close'>取消</button>
+        <button size="mini" bindtap='pay' wx:if="{{login && isAbled}}" disabled='{{!time}}' class="right-btn">确定支付</button>
+        <button size="mini" wx:if="{{login && !isAbled}}" disabled class="right-btn">确定支付</button>
+        <button size="mini" class='login-button right-btn' open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" wx:if="{{!login}}">登录支付</button>
+      </view>
+      <block>
+        <view class="tips" wx:if="{{freeNum > 0}}"><text class="point">.</text>如遇到支付成功设备未启动的情况，可能是设备信号不好，系统将在5分钟后退还次数，请耐心等待！<view class="num">剩余免费次数：<text class="black">{{freeNum}}次</text></view></view>
+        <view class="tips" wx:else><text class="point">.</text>如遇到支付成功设备未启动的情况，可能是设备信号不好，系统将在5分钟后自动退款，请耐心等待！<view class="num" wx:if="{{isDriver}}">剩余免费次数：<text class="black">{{freeNum}}次</text></view></view>
+    </block>
+    </view>
+  </view>
+  <!-- 倒计时 -->
+  <view class='countdown' wx:if="{{countdown}}">
+    <view class="red-tips">如遇到支付成功设备未启动的情况，系统将在5分钟后自动退款，请耐心等待！</view>
+    <view class='time'>
+      <text>{{wxTimer}}</text>
+    </view>
+    <view class='button' bindtap='stop'>停止</view>
+  </view>
+</view>
+<view class="backwards" wx:if="{{backwards}}">
+  <text wx:if="{{!gift}}">{{backwardsNum}}</text>
+  <view class="gift {{active}}" wx:else>
+    <image class="gift-bg" src="../../static/img/gift.png"></image>
+    <view class="gift-box">
+      <block wx:for="{{mini}}" wx:key="{{index}}">
+        <image bindtap="goToMini" src="{{miniSrc + item.src}}" data-appid="{{item.appId}}" data-path="{{item.path}}"></image>
+      </block>
+    </view>
+    <image class="close-gift" bindtap="closeGift" src="../../static/img/close1.png"></image>
+  </view>
+</view>
+<view class="dialog" wx:if="{{dialog}}">
+  <view class="dialog-box">
+    <view class="dialog-title">提示</view>
+    <view class="dialog-content">
+      <view class="{{center}}">{{dialogText}}</view>
+    </view>
+    <view class="button" bindtap="dialogClose">知道了</view>
+  </view>
+</view>
+<view class='contact'>
+  <image src='../../static/img/contact.png'></image>
+  <button open-type="contact"></button>
+</view>

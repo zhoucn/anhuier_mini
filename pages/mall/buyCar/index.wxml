@@ -1,0 +1,39 @@
+<view class="goods-container">
+  <checkbox-group bindchange="checkboxChange" class="li-content">
+    <view wx:for="{{goodsList}}" class="check-li {{item.isOnline == 0 ? 'disabled' : ''}}" wx:key="{{item.goodsId}}" bindlongpress="longpress" data-id="{{item.goodsId}}" data-index="{{index}}">
+      <label class="checkbox">
+        <checkbox value="{{item.goodsId}}" checked="{{item.checkbox}}" disabled="{{item.isOnline == 0}}" />
+      </label>
+      <view class="check-view">
+        <image class="img" src="{{imgUrl + item.goodsImg.src}}"></image>
+        <view class="goods_info">
+          <view class='goods_title'>{{item.goodsTitle}}</view>
+          <view class='goods_bug'>
+            <view style='display:inline-block;font-size:26rpx;'>￥</view>
+            <view style='display:inline-block'>{{item.goodsPrice}}</view>
+            <view class="num">
+              <view wx:if="{{item.goodsNum == 1 || item.isOnline == 0}}"></view>
+              <view wx:else bindtap="reduce" data-index="{{index}}" data-id="{{item.goodsId}}">-</view>
+              <text>{{item.goodsNum}}</text>
+              <view wx:if="{{item.goodsNum == item.stockNum || item.isOnline == 0}}"></view>
+              <view wx:else bindtap="add" data-index="{{index}}" data-id="{{item.goodsId}}">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </checkbox-group>
+</view>
+<view class='item_tabBar'>
+    <checkbox-group bindchange="selectAll" class="checkbox-group">
+      <label>
+        <checkbox value="1" checked='{{seAll}}' />
+        全选
+      </label>
+    </checkbox-group>
+    <button class='bug_button' bindtap="account" wx:if="{{selectId.length > 0}}">结算( {{count}} )</button>
+    <button class='bug_button disabled' wx:else>结算( {{count}} )</button>
+    <view class="count">
+      <text style="font-size: 22rpx;color: #666;">合计：</text><text style='font-size:22rpx;'>￥</text><text>{{price}}</text>
+    </view>
+</view>

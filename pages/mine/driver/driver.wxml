@@ -1,0 +1,17 @@
+<!--pages/mine/driver/driver.wxml-->
+<view wx:if="{{role=='proxy'}}" style='text-align:center;font-size:40rpx;margin-top:10rpx;'>合作代理</view>
+<view class=' page-box'>
+  <text class='phone'>手机号</text>
+  <input placeholder='请输入手机号' bindinput='phoneValue' maxlength="11" type='number'></input>
+</view>
+<view class='page-box'>
+  <input placeholder='请输入验证码' class='code-input' bindinput='codeValue'></input>
+  <button class='code' bindtap='getCode' disabled='{{disabled}}'>{{time}}</button>
+</view>
+<button class='submit-button' bindtap='submit'>登录</button>
+<view class='navigator' bindtap='register'> 还未注册？点这注册</view>
+<view class='contact'>
+  <image src='../../../static/img/contact.png'></image>
+  <text>客服</text>
+  <button open-type="contact"></button>
+</view>

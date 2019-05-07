@@ -1,0 +1,10 @@
+<!--pages/mine/device/deviceMap/deviceMap.wxml-->
+<view class="map_container">
+  <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map>
+  <view></view>
+</view>
+<view class='contact'>
+  <image src='../../../../static/img/contact.png'></image>
+  <text>客服</text>
+  <button open-type="contact"></button>
+</view>

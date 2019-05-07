@@ -1,0 +1,49 @@
+/* pages/mine/driver/toProxy/toProxy.wxss */
+
+page {
+  background: #f6f6f6;
+}
+
+.device-box1 {
+  width: 600rpx;
+  height: 700rpx;
+  background: #fff;
+  margin: 40rpx auto;
+  box-shadow: #ccc 10rpx 10rpx 10rpx;
+  line-height: 80rpx;
+  padding: 20rpx;
+  font-size: 32rpx;
+}
+
+.device-box1 text, .device-box2 text {
+  font-size: 36rpx;
+  margin-left: 20rpx;
+  font-weight: 500;
+}
+
+checkbox-group {
+  display: inline-block;
+}
+
+.checkbox {
+  text-align: center;
+  margin-top: 80rpx;
+}
+
+.checkbox checkbox {
+  transform: scale(0.7);
+}
+
+navigator {
+  display: inline-block;
+  color: blue;
+  font-size: 30rpx;
+}
+
+.submit {
+  width: 213rpx;
+  height: 70rpx;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  margin-top: 20rpx;
+}

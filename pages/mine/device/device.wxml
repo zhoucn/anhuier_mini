@@ -1,0 +1,65 @@
+<!--pages/mine/device/device.wxml-->
+<!-- 司机 -->
+<view class='device-box1' wx:if="{{!is_proxy}}">
+  <view wx:if="{{device.length == 0}}">
+    <image src='../../../static/img/scanCode.png' bindtap='bindDevice' class="scanCode"></image>
+  </view>
+  <block wx:for="{{device}}" wx:key="{{index}}">
+    <view>
+      <text>按摩垫编号：</text>{{item.device_no}}
+    </view>
+    <view>
+      <text>按摩垫状态：</text> {{item.device_state}}
+    </view>
+    <view>
+      <text>使用状态：</text> {{item.use_state}}
+    </view>
+  </block>
+</view>
+<!-- 代理 -->
+<view class='device-box2' wx:if="{{is_proxy}}">
+  <view class='search'>
+    <input placeholder="请输入按摩垫编号" placeholder-style='color:#ccc' bindinput='search'></input>
+  </view>
+  <block wx:for="{{device}}" wx:key="{{index}}" wx:if="{{!is_search}}">
+    <view class='device-list'>
+      <view>
+        <text> 编号：</text>{{item.device_no}}
+      </view>
+      <view>
+        <text> 状态：</text>{{item.use_state}}
+      </view>
+      <view>
+        <text>位置：</text>
+        <text class='detail' bindtap='deviceMap' data-device_no='{{item.device_no}}'>查看</text>
+      </view>
+      <view>
+        <text> 总收益：</text>{{item.total}}(元)
+        <text class='detail' bindtap='incomeDetail' data-device_no='{{item.device_no}}'>详情</text>
+      </view>
+    </view>
+  </block>
+  <block wx:for="{{searchValue}}" wx:key="{{index}}" wx:if="{{is_search}}">
+    <view class='device-list'>
+      <view>
+        <text> 编号：</text>{{item.device_no}}
+      </view>
+      <view>
+        <text> 状态：</text>{{item.use_state}}
+      </view>
+      <view>
+        <text>位置：</text>
+        <text class='detail' bindtap='deviceMap' data-device_no='{{item.device_no}}'>查看</text>
+      </view>
+      <view>
+        <text> 总收益：</text>{{item.total}}(元)
+        <text class='detail' bindtap='incomeDetail' data-device_no='{{item.device_no}}'>详情</text>
+      </view>
+    </view>
+  </block>
+</view>
+<view class='contact'>
+  <image src='../../../static/img/contact.png'></image>
+  <text>客服</text>
+  <button open-type="contact"></button>
+</view>

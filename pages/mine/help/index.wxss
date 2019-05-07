@@ -1,0 +1,8 @@
+/* pages/mine/help/index.wxss */
+page {
+  text-align: center;
+  padding: 20rpx 0;
+}
+image {
+  width: 710rpx;
+}

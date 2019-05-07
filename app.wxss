@@ -1,0 +1,60 @@
+/**app.wxss**/
+page {
+  background-color: #f7f7f7;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.list-title{
+  font-size: 50rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #666;
+  margin-bottom: 20rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+/* 客服 */
+
+.contact {
+  position: fixed;
+  bottom: 55rpx;
+  right: 24rpx;
+  width: 86rpx;
+  height: 86rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 20rpx #f8e4e2;
+}
+
+.contact button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  opacity: 0;
+  padding: 2rpx 0;
+  line-height: 60rpx;
+}
+
+.contact image {
+  width: 58rpx;
+  height: 58rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.contact text {
+  opacity: 0;
+}

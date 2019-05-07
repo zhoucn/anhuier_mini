@@ -1,0 +1,58 @@
+<!--pages/mine/income/index/index.wxml-->
+<view class='day_income'>
+  <view class="title"><view class="hot"></view>今日收益</view>
+  <view class='income_box'>
+    <view>
+      <text class='text_big'>{{todayCount}}(笔)</text>
+      <text>今日订单数</text>
+    </view>
+    <view>
+      <text class='text_big'>{{todayMoney}}(￥)</text>
+      <text>今日收益</text>
+    </view>
+  </view>
+  <view class="title"><view class="hot"></view>昨日收益</view>
+  <view class='income_box'>
+    <view>
+      <text class='text_big'>{{yesCount}}(笔)</text>
+      <text>昨日订单数</text>
+    </view>
+    <view>
+      <text class='text_big'>{{yesMoney}}(￥)</text>
+      <text>昨日收益</text>
+    </view>
+  </view>
+  <view class="title"><view class="hot"></view>本周收益</view>
+  <view class='income_box'>
+    <view>
+      <text class='text_big'>{{weekCount}}(笔)</text>
+      <text>本周订单数</text>
+    </view>
+    <view>
+      <text class='text_big'>{{weekMoney}}(￥)</text>
+      <text>本周收益</text>
+    </view>
+  </view>
+  <view class="title"><view class="hot"></view>本月收益</view>
+  <view class='income_box'>
+    <view>
+      <text class='text_big'>{{monthCount}}(笔)</text>
+      <text>本月订单数</text>
+    </view>
+    <view>
+      <text class='text_big'>{{monthMoney}}(￥)</text>
+      <text>本月收益</text>
+    </view>
+  </view>
+  <view class="title"><view class="hot"></view>全部收益</view>
+  <view class='income_box'>
+    <view>
+      <text class='text_big'>{{allCount}}(笔)</text>
+      <text>全部订单数</text>
+    </view>
+    <view>
+      <text class='text_big'>{{allMoney}}(￥)</text>
+      <text>全部收益</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+<!--pages/mall/buy/index.wxml-->
+<view>
+  <navigator class='navigator' url="../address/index?buy=1" wx:if="{{addressList.length == 0}}">
+    <image src="../../../static/img/location.png" class="location"></image>
+    <text>收货地址</text>
+    <image src='../../../static/img/more.png'></image>
+  </navigator>
+  <navigator url="../address/index?buy=1" wx:else class="address-li">
+  <image src="../../../static/img/location.png" class="location"></image>
+    <block wx:for="{{addressList}}" wx:key="{{index}}">
+      <view wx:if="{{item}}">
+        <view><text class="name">{{item.name}}</text><text class="phone">{{item.phone}}</text></view>
+        <view class="address">{{item.region[0]}} {{item.region[1]}} {{item.region[2]}} {{item.address}}</view>
+      </view>
+    </block>
+    <image src='../../../static/img/more.png' class="right"></image>
+  </navigator>
+</view>
+
+<view class="list-ul">
+  <view class='list' wx:for="{{goodsList}}" wx:key="{{index}}">
+    <image src="{{imgUrl + item.goodsImg.src}}"></image>
+    <view class="list-info">
+      <view class='title'>{{item.goodsTitle}}</view>
+      <view class='price'><text style="font-size:28rpx;">￥</text> {{item.goodsPrice}}<text class='num'>x {{item.goodsNum}}</text></view>
+    </view>
+  </view>
+  <view class="textarea">
+    <textarea placeholder="备注" placeholder-style="color: #ccc" bindinput="setRemark" value="{{remark}}" maxlength="60" />
+  </view>
+</view>
+
+<view class='item_tabBar'>
+    <text> 共 {{count}} 件</text>
+    <text>合计：</text>
+    <text style='color:#c00702;margin:0;font-weight:bold;'>￥{{price}}</text>
+    <view class='bug_button' bindtap="account">结算</view>
+</view>

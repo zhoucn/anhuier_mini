@@ -1,0 +1,2 @@
+<!--pages/mine/help/index.wxml-->
+<image src="{{helpUrl + src}}" mode="widthFix" wx:if="{{src}}"></image>

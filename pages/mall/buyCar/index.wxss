@@ -1,0 +1,184 @@
+page{
+  height: 100%;
+  position: relative;
+  background-color: #eff0f1;
+}
+
+.goods-container {
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 90rpx;
+}
+
+.item_tabBar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  line-height: 90rpx;
+  text-align: right;
+}
+.item_tabBar text{
+  font-size: 32rpx;
+  margin: 0 20rpx;
+}
+.bug_button {
+  font-size: 22rpx;
+  color: #fff;
+  background: #f63;
+  text-align: center;
+  width: 156rpx;
+  height: 66rpx;
+  float: right;
+  line-height: 66rpx;
+  margin: 14rpx 20rpx 12rpx 40rpx;
+  border-radius: 30rpx;
+  background: linear-gradient(to right, #f18885 , #d84945);
+}
+.bug_button.disabled {
+  opacity: 0.6
+}
+.img {
+  width: 176rpx;
+  height: 176rpx;
+  margin: 12rpx 0;
+  border-radius: 30rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+.title {
+  width: 400rpx;
+  font-size: 32rpx;
+  display: inline-block;
+}
+.li-content{
+  width: 700rpx;
+  margin: 0 auto;
+}
+.checkbox-group {
+  float: left;
+  font-size: 26rpx;
+  color: #666;
+  margin-left: 25rpx;
+}
+.checkbox-group label {
+  width: auto;
+  height: 48rpx;
+  line-height: 48rpx;
+  display: inline-block;
+}
+  .checkbox-group checkbox .wx-checkbox-input {
+    margin-top: -6rpx;
+  }
+.check-li {
+  height: 200rpx;
+  margin: 30rpx 0;
+  border-radius: 30rpx;
+  background-color: #fff;
+}
+.check-li.disabled {
+  background-color: #f7f7f7;
+}
+label {
+  width: 36rpx;
+  height: 36rpx;
+  margin: 0 18rpx;
+}
+label image {
+  width: 36rpx;
+}
+checkbox-group .check-view {
+  display: inline-block;
+}
+.checkbox checkbox {
+  width: 36rpx;
+  height: 36rpx;
+  line-height: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+checkbox .wx-checkbox-input {
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
+  background: #fff;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::after {
+  content: '';
+  display: inline-block;
+  width: 24rpx;
+  height: 24rpx;
+  background: #dc4e4a;
+  margin: 6rpx;
+  border-radius: 50%;
+}
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
+  opacity: 0;
+}
+.goods_info {
+  width: 410rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 26rpx;
+}
+
+.goods_title {
+  height: 90rpx;
+  font-size: 28rpx;
+  color: rgba(51, 51, 51, 1);
+  line-height: 40rpx;
+  text-align: left;
+  overflow-y: hidden;
+  margin-bottom: 15rpx;
+}
+
+.goods_bug {
+  font-weight: 600;
+  font-size: 36rpx;
+  color: #c00702;
+}
+
+.num {
+  float: right;
+}
+
+.num view, .num text {
+  text-align: center;
+  line-height: 36rpx;
+  display: inline-block;
+  vertical-align: middle;
+  color: #4c4c4c;
+}
+
+.num text {
+  font-size: 36rpx;
+  width: 60rpx;
+}
+
+.num view {
+  font-weight: bold;
+  font-size: 28rpx;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+}
+
+.count {
+  float: right;
+}
+
+.count text {
+  font-size: 26rpx;
+  color: #c00702;
+  margin: auto;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}

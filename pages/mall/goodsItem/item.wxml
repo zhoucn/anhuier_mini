@@ -1,0 +1,39 @@
+<!--pages/mall/goodsItem/item.wxml-->
+<view>
+  <view>
+    <swiper class='index_swiper' indicator-dots="true" circular="true">
+      <block wx:for="{{goodsImgs}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{imgUrl + item.src}}" class="slide_image" mode="aspectFit" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="goods-info">
+    <view class='goods_title'>{{goodsTitle}}</view>
+    <view class='ticket_price'><text style="font-size: 26rpx;">￥</text>{{goodsPrice}}<image src="../../../static/img/baoyou.png" mode="widthFix" class="tag"></image><text class="stock-num">库存：{{stockNum}}</text></view>
+  </view>
+  <view class='goods_price'>
+    <block wx:for="{{goodsServices}}" wx:key="{{index}}">
+      <view class="goods_text">
+        <icon type="success" size="12" color="#d8271c" /><text class='sales'>{{item.serviceName}}</text>
+      </view>
+    </block>
+    <view class='line'></view>
+  </view>
+  <view class="goodsItem">
+     -商品详情-
+  </view>
+  <view class='goods_detail'>
+    <image src='{{infoUrl + goodsInfo}}' mode="widthFix" wx:if="{{goodsInfo}}"></image>
+  </view>
+  <view class='item_tabBar'>
+    <view class='car_button' bindtap="toBuycar">
+      <view class="num">{{cartNum}}</view>
+      <image src="../../../static/img/buyCar.png"></image>
+      购物车
+    </view>
+    <view class='buy-car-button' bindtap="addCar">加入购物车</view>
+    <view class='buy-button' bindtap="toBuy">立即购买</view>
+  </view>
+</view>

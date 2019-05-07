@@ -1,0 +1,36 @@
+<!--pages/mine/driver/toProxy/toProxy.wxml-->
+<view class='device-box1'>
+  <view>
+    <text>姓名：</text>{{driver.name}}
+  </view>
+  <view>
+    <text>身份证号：</text> {{driver.IDCard}}
+  </view>
+  <view>
+    <text>手机号：</text> {{driver.phone}}
+  </view>
+  <view>
+    <text>车牌号：</text> {{driver.car_no}}
+  </view>
+  <view>
+    <text>车属公司：</text> {{driver.company}}
+  </view>
+  <view>
+    <text>按摩垫编号：</text> {{driver.device_no}}
+  </view>
+  <view>
+    <text>按摩垫代理费：</text> {{driver.money}}
+  </view>
+</view>
+<view class='checkbox'>
+  <checkbox-group bindchange="checkbox">
+    <checkbox value="checkbox"></checkbox>
+  </checkbox-group>
+  <navigator url='../../protocol/protocol'>《按会儿按摩垫司机合作协议》</navigator>
+</view>
+<button class="submit" type="primary" disabled='{{protocol}}' bindtap='addProxy'>确定并提交</button>
+<view class='contact'>
+  <image src='../../../../static/img/contact.png'></image>
+  <text>客服</text>
+  <button open-type="contact"></button>
+</view>

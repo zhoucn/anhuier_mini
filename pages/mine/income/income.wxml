@@ -1,0 +1,22 @@
+<!--pages/mine/income/income.wxml-->
+<view class='point' wx:if="{{!incomeList.length}}">
+  <text>暂无收益记录~</text>
+</view>
+<view>
+  <block wx:for="{{incomeList}}" wx:key="{{index}}">
+    <view class='income-list'>
+      <view class='left'>
+        <text class='detail'>订单号:{{item.order_no}}</text>
+        <text class='time'>{{item.income_at}}</text>
+      </view>
+      <view class='right'>
+        <text class='money'> {{item.money}}元</text>
+      </view>
+    </view>
+  </block>
+</view>
+<view class='contact'>
+  <image src='../../../static/img/contact.png'></image>
+  <text>客服</text>
+  <button open-type="contact"></button>
+</view>

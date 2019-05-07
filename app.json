@@ -1,0 +1,65 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mine/index/index",
+    "pages/mine/order/order",
+    "pages/mine/driver/driver",
+    "pages/mine/income/income",
+    "pages/mine/withdraw/withdraw",
+    "pages/mine/driverInfo/driverInfo",
+    "pages/mall/index",
+    "pages/mall/goodsItem/item",
+    "pages/mall/buy/index",
+    "pages/mall/buyCar/index",
+    "pages/mall/address/index",
+    "pages/mall/addAddress/index",
+    "pages/mine/device/device",
+    "pages/mine/income/index/index",
+    "pages/mine/device/deviceMap/deviceMap",
+    "pages/mine/addDriver/addDriver",
+    "pages/mine/addProxy/addProxy",
+    "pages/mine/protocol/protocol",
+    "pages/mine/driver/toProxy/toProxy",
+    "pages/mine/withdraw/withDetail/withDetail",
+    "pages/mine/proxyMore/proxyMore",
+    "pages/out/out",
+    "pages/mall/order/index",
+    "pages/mall/orderInfo/index",
+    "pages/mine/help/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f8624c",
+    "navigationBarTitleText": "按会儿",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#bbbbbc",
+    "selectedColor": "#fb5e48",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/img/index.png",
+        "selectedIconPath": "static/img/index1.png"
+      },
+      {
+        "pagePath": "pages/mall/index",
+        "text": "商城",
+        "iconPath": "static/img/mall.png",
+        "selectedIconPath": "static/img/mall1.png"
+      },
+      {
+        "pagePath": "pages/mine/index/index",
+        "text": "我的",
+        "iconPath": "static/img/my.png",
+        "selectedIconPath": "static/img/my1.png"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wxab3cfc4cada8b5c6",
+    "wx563be0f11a7c8049"
+  ]
+}

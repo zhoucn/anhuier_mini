@@ -1,0 +1,37 @@
+<!--pages/mall/index.wxml-->
+<swiper indicator-dots="true" autoplay="true" circular="true" class='index-swiper'>
+  <block wx:for="{{banner}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{ bannerSrc + item}}" class="slide-image" bindtap="bannerUrl"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="hot"><view></view>热门商品</view>
+<scroll-view scroll-y="true" class="list">
+  <view wx:for="{{goodsList}}" wx:key="{{index}}">
+    <view class="goods_list">
+      <image src="{{imgUrl + item.goodsImg.src}}" wx:if="{{item.goodsImg.src}}"></image>
+      <image class="no" wx:else></image>
+      <view class="goods_info">
+        <view class='goods_title'>
+          {{item.goodsTitle}}
+        </view>
+        <view class='goods_bug'>
+          <view style='display:inline-block;font-size:26rpx;'>￥</view>
+          <view style='display:inline-block'>{{item.goodsPrice}}</view>
+          <!-- <view class="buy-btn" bindtap="goToMini">马上抢</view> -->
+          <navigator url="./goodsItem/item?id={{item.goodsId}}" class="buy-btn">马上抢</navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class='tip'wx:if="{{!goodsList}}">
+  <image src='../../static/img/shop.png'></image>
+  <text>商品正在准备中，敬请期待</text>
+ </view>
+<view class='contact'>
+  <image src='../../static/img/contact.png'></image>
+  <text>客服</text>
+  <button open-type="contact"></button>
+</view>
